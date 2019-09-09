@@ -11,9 +11,16 @@ document.addEventListener("DOMContentLoaded", function () {
     this.cellSize = 10;
     this.speed = 200;
 
+    // buttons
+    var play = document.getElementById('play');
+    var pause = document.getElementById('pause');
+
     // add event listeners
     this.setEvents = function () {
-      document.getElementById('play').addEventListener('click', this.start);
+      play.addEventListener('click', this.start);
+      pause.addEventListener('click', function(){
+        clearInterval(self.interval);
+      })
     }
 
     // draw grid
@@ -118,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     this.start = function(){
-      setInterval(self.printNexGeneration,self.speed);
+      self.interval = setInterval(self.printNexGeneration,self.speed);
     }
   }
 
