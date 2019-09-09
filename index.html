@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>let's play</title>
+    <title>Conway's Game of Life</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="text/javascript" src="js/app.js"></script>
 </head>
@@ -15,6 +15,14 @@
         <section id="game-set">
             <button id="play">graj</button>
             <button id="pause">pauza</button>
+        </section>
+        <section id="rules">
+            <ol>
+                <li>Each live cell with one or no neighbors dies, as if by solitude.</li>
+                <li>Each live cell with four or more neighbors dies, as if by overpopulation.</li>
+                <li>Each cell with two or three neighbors survives.</li>
+                <li>Each empty cell with three neighbors becomes populated.</li>
+            </ol>
         </section>
     </div>
 </body>
